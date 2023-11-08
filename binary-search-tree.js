@@ -8,42 +8,30 @@ class Node {
   }
 
   /** findRecursively(val): Search from the invoking node for a node with value val.
-  * Returns the node, if found; else undefined. Uses recursion. */
+   * Returns the node, if found; else undefined. Uses recursion. */
 
-  findRecursively(val) {
-
-  }
+  findRecursively(val) {}
 
   /** insertRecursively(val): Starting at the invoking node, insert a new node
    * into the BST with value val. Returns the inserted node. Uses recursion. */
 
-  insertRecursively(val) {
-
-  }
+  insertRecursively(val) {}
 
   /** dfsPreOrder(): Traverse from the invoking node using pre-order DFS.
-  * Returns an array of visited nodes. */
+   * Returns an array of visited nodes. */
 
-  dfsPreOrder() {
-
-  }
+  dfsPreOrder() {}
 
   /** dfsInOrder(): Traverse from the invoking node using in-order DFS.
-  * Returns an array of visited nodes. */
+   * Returns an array of visited nodes. */
 
-  dfsInOrder() {
-
-  }
+  dfsInOrder() {}
 
   /** dfsPostOrder(): Traverse from the invoking node using post-order DFS.
-  * Returns an array of visited nodes. */
+   * Returns an array of visited nodes. */
 
-  dfsPostOrder() {
-
-  }
-
+  dfsPostOrder() {}
 }
-
 
 class BinarySearchTree {
   constructor(root = null) {
@@ -54,72 +42,83 @@ class BinarySearchTree {
    * Returns the tree instance. Uses iteration. */
 
   insert(val) {
+    if (this.root === null) return (this.root = new Node(val));
 
+    let current = this.root;
+
+    while (current) {
+      if (current.left && current.right) {
+        current = val > current.val ? current.right : current.left;
+      } else {
+        //to the right
+        // if (val > current.val) {
+        //   if (current.right !== null && val > current.right.val) {
+        //     current.left = current.right;
+        //     return (current.right = new Node(val));
+        //   } else {
+        //     return (current.left = new Node(val));
+        //   }
+        // } else {
+        //   //to the left
+        //   if (current.left !== null && val < current.left) {
+        //     current.right = current.left;
+        //     return (current.left = new Node(val));
+        //   } else {
+        //     return (current.right = new Node(val));
+        //   }
+        // }
+        // return val > current.val
+        //   ? (current.right = new Node(val))
+        //   : (current.left = new Node(val));
+      }
+    }
   }
 
   /** insertRecursively(val): Insert a new node into the BST with value val.
    * Returns the tree instance. Uses recursion. */
 
-  insertRecursively(val) {
-
-  }
+  insertRecursively(val) {}
 
   /** find(val): Search the BST for a node with value val.
    * Returns the node, if found; else undefined. Uses iteration. */
 
-  find(val) {
-
-  }
+  find(val) {}
 
   /** findRecursively(val): Search the BST for a node with value val.
    * Returns the node, if found; else undefined. Uses recursion. */
 
-  findRecursively(val) {
-
-  }
+  findRecursively(val) {}
 
   /** dfsPreOrder(): Traverse the BST using pre-order DFS.
    * Returns an array of visited nodes. */
 
-  dfsPreOrder() {
-
-  }
+  dfsPreOrder() {}
 
   /** dfsInOrder(): Traverse the BST using in-order DFS.
    * Returns an array of visited nodes. */
 
-  dfsInOrder() {
-
-  }
+  dfsInOrder() {}
 
   /** dfsPostOrder(): Traverse the BST using post-order DFS.
    * Returns an array of visited nodes. */
 
-  dfsPostOrder() {
-
-  }
+  dfsPostOrder() {}
 
   /** bfs(): Traverse the BST using BFS.
    * Returns an array of visited nodes. */
 
-  bfs() {
-
-  }
+  bfs() {}
 
   /** findSuccessorNode(node): Find and return node with next largest value.
    * Returns undefined if no successor. */
 
-  findSuccessorNode(node) {
-
-  }
+  findSuccessorNode(node) {}
 
   /** Further Study!
    * remove(val): Removes a node in the BST with the value val.
    * Returns the removed node. */
 
-  remove(val) {
-
-  }
+  remove(val) {}
 }
 
 module.exports = {
